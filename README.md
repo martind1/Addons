@@ -1,4 +1,4 @@
 Addons
 ======
 
-Addons für Enterprise Anwendungen
+Delphi Addons für Enterprise Anwendungen
