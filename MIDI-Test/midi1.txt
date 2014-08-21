@@ -1,0 +1,82 @@
+I think these will point you to the right direction:
+
+http://crystal.apana.org.au/~ghansper/midi_introduction/midi_file_format.html
+http://www.wotsit.org/download.asp?f=midi
+
+
+procedure TSngFile.SaveAsMidi(note: byte; FileName: string);
+const
+  // MIDI file header
+  midHdr: array[0..13]of byte =
+   // [0..3] Always MThd
+   ($4D,$54,$68,$64,
+   // [4..7] Always the same
+   $00,$00,$00,$06,
+   // [8..9] Two bytes for file format
+   // $01 = synchronous multiple tracks
+   $00,$01,
+   // [10..11] Two bytes for number of tracks
+   $00,$01,
+   // [12..13] Two bytes for ticks per quarter note
+   $01,$E0);
+
+  // MIDI track header
+  midTrk: array[0..7]of byte =
+   // [0..3] Always MTrk
+   ($4D,$54,$72,$6B,
+   // [4..7] Four bytes for track size in bytes
+   $00,$00,$00,$0E);
+  // MIDI track end bytes
+
+  midEnd: array[0..3]of byte =
+   // [0..3] Always the same
+   ($00,$FF,$2F,$00);
+
+  // MIDI command
+  midCmd: array[0..4]of byte =
+   // [0..1] Two bytes for time in ticks
+   ($80,$00,
+   // [2] Command:
+   // $90 = Note on at channel 0
+   // $80 = Note off at channel 0
+   $90,
+   // [3] Note and [4] velocity
+   $00,$00);
+
+  // Constant velocity
+  Velocity = $FF;
+  // Constant duration
+  Time     = $FF;
+var
+  midFile: TFileStream;
+begin
+  // Create MIDI file
+  midFile := TFileStream.Create(FileName +'.mid', fmCreate);
+  with midFile do try
+
+    // Write MIDI header
+    Write(midHdr, SizeOf(midHdr));
+
+    // Write MIDI track
+    Write(midTrk, SizeOf(midTrk));
+
+    // Write Note On
+    // Play immediately = time is 0
+    midCmd[2] := $90;
+    midCmd[3] := Note;
+    midCmd[4] := Velocity;
+    Write(midCmd, SizeOf(midCmd));
+
+    // Write Note Off
+    // Separate time into two bytes
+    midCmd[0] := $80 or (Time div 128 mod 128);
+    midCmd[1] := $00 or (Time mod 128);
+    midCmd[2] := $80;
+    Write(midCmd, SizeOf(midCmd));
+
+    // Write MIDI track end
+    Write(midEnd, SizeOf(midEnd));
+  finally
+    midFile.Free;
+  end;
+end;

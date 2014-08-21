@@ -1,0 +1,5 @@
+[29.05.14]
+svnignore.txt enthält auch die Verzeichnisse die nicht versioniert werden sollen,
+weil das Fremdkomponenten sind.
+
+.bpl ignorded

@@ -1,0 +1,192 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{3E053B22-AA52-46C4-ADEC-8992516EECA4}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Addons.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="NativeExcel3\Source\NativeExcelDXE2.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="fbarcode2\PBarcode.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="XYGraph\XYGraph.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="ZipMaster\Delphi\ZipMasterD13.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="tdbf\tdbf_dXE2r.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="tdbf\tdbf_dXE2d.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Combit\LL17\ListLabel17.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Combit\LL.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="BMCSAD\Bmcsad_TLB.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Quickrep\QR5RunDXE2.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Quickrep\QR5DesignDXE2.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TeeChart\Quickreport\DclTee9QR5D16.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TeeChart\Quickreport\Tee9QR5D16.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Addons">
+			<MSBuild Projects="Addons.dproj"/>
+		</Target>
+		<Target Name="Addons:Clean">
+			<MSBuild Projects="Addons.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Addons:Make">
+			<MSBuild Projects="Addons.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="NativeExcelDXE2">
+			<MSBuild Projects="NativeExcel3\Source\NativeExcelDXE2.dproj"/>
+		</Target>
+		<Target Name="NativeExcelDXE2:Clean">
+			<MSBuild Projects="NativeExcel3\Source\NativeExcelDXE2.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="NativeExcelDXE2:Make">
+			<MSBuild Projects="NativeExcel3\Source\NativeExcelDXE2.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="PBarcode">
+			<MSBuild Projects="fbarcode2\PBarcode.dproj"/>
+		</Target>
+		<Target Name="PBarcode:Clean">
+			<MSBuild Projects="fbarcode2\PBarcode.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PBarcode:Make">
+			<MSBuild Projects="fbarcode2\PBarcode.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="XYGraph">
+			<MSBuild Projects="XYGraph\XYGraph.dproj"/>
+		</Target>
+		<Target Name="XYGraph:Clean">
+			<MSBuild Projects="XYGraph\XYGraph.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="XYGraph:Make">
+			<MSBuild Projects="XYGraph\XYGraph.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="ZipMasterD13">
+			<MSBuild Projects="ZipMaster\Delphi\ZipMasterD13.dproj"/>
+		</Target>
+		<Target Name="ZipMasterD13:Clean">
+			<MSBuild Projects="ZipMaster\Delphi\ZipMasterD13.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ZipMasterD13:Make">
+			<MSBuild Projects="ZipMaster\Delphi\ZipMasterD13.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="tdbf_dXE2r">
+			<MSBuild Projects="tdbf\tdbf_dXE2r.dproj"/>
+		</Target>
+		<Target Name="tdbf_dXE2r:Clean">
+			<MSBuild Projects="tdbf\tdbf_dXE2r.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="tdbf_dXE2r:Make">
+			<MSBuild Projects="tdbf\tdbf_dXE2r.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="tdbf_dXE2d">
+			<MSBuild Projects="tdbf\tdbf_dXE2d.dproj"/>
+		</Target>
+		<Target Name="tdbf_dXE2d:Clean">
+			<MSBuild Projects="tdbf\tdbf_dXE2d.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="tdbf_dXE2d:Make">
+			<MSBuild Projects="tdbf\tdbf_dXE2d.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="ListLabel17">
+			<MSBuild Projects="Combit\LL17\ListLabel17.dproj"/>
+		</Target>
+		<Target Name="ListLabel17:Clean">
+			<MSBuild Projects="Combit\LL17\ListLabel17.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ListLabel17:Make">
+			<MSBuild Projects="Combit\LL17\ListLabel17.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="LL">
+			<MSBuild Projects="Combit\LL.dproj"/>
+		</Target>
+		<Target Name="LL:Clean">
+			<MSBuild Projects="Combit\LL.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="LL:Make">
+			<MSBuild Projects="Combit\LL.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Bmcsad_TLB">
+			<MSBuild Projects="BMCSAD\Bmcsad_TLB.dproj"/>
+		</Target>
+		<Target Name="Bmcsad_TLB:Clean">
+			<MSBuild Projects="BMCSAD\Bmcsad_TLB.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Bmcsad_TLB:Make">
+			<MSBuild Projects="BMCSAD\Bmcsad_TLB.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="QR5RunDXE2">
+			<MSBuild Projects="Quickrep\QR5RunDXE2.dproj"/>
+		</Target>
+		<Target Name="QR5RunDXE2:Clean">
+			<MSBuild Projects="Quickrep\QR5RunDXE2.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="QR5RunDXE2:Make">
+			<MSBuild Projects="Quickrep\QR5RunDXE2.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="QR5DesignDXE2">
+			<MSBuild Projects="Quickrep\QR5DesignDXE2.dproj"/>
+		</Target>
+		<Target Name="QR5DesignDXE2:Clean">
+			<MSBuild Projects="Quickrep\QR5DesignDXE2.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="QR5DesignDXE2:Make">
+			<MSBuild Projects="Quickrep\QR5DesignDXE2.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="DclTee9QR5D16">
+			<MSBuild Projects="TeeChart\Quickreport\DclTee9QR5D16.dproj"/>
+		</Target>
+		<Target Name="DclTee9QR5D16:Clean">
+			<MSBuild Projects="TeeChart\Quickreport\DclTee9QR5D16.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="DclTee9QR5D16:Make">
+			<MSBuild Projects="TeeChart\Quickreport\DclTee9QR5D16.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Tee9QR5D16">
+			<MSBuild Projects="TeeChart\Quickreport\Tee9QR5D16.dproj"/>
+		</Target>
+		<Target Name="Tee9QR5D16:Clean">
+			<MSBuild Projects="TeeChart\Quickreport\Tee9QR5D16.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Tee9QR5D16:Make">
+			<MSBuild Projects="TeeChart\Quickreport\Tee9QR5D16.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Addons;NativeExcelDXE2;PBarcode;XYGraph;ZipMasterD13;tdbf_dXE2r;tdbf_dXE2d;ListLabel17;LL;Bmcsad_TLB;QR5RunDXE2;QR5DesignDXE2;DclTee9QR5D16;Tee9QR5D16"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Addons:Clean;NativeExcelDXE2:Clean;PBarcode:Clean;XYGraph:Clean;ZipMasterD13:Clean;tdbf_dXE2r:Clean;tdbf_dXE2d:Clean;ListLabel17:Clean;LL:Clean;Bmcsad_TLB:Clean;QR5RunDXE2:Clean;QR5DesignDXE2:Clean;DclTee9QR5D16:Clean;Tee9QR5D16:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Addons:Make;NativeExcelDXE2:Make;PBarcode:Make;XYGraph:Make;ZipMasterD13:Make;tdbf_dXE2r:Make;tdbf_dXE2d:Make;ListLabel17:Make;LL:Make;Bmcsad_TLB:Make;QR5RunDXE2:Make;QR5DesignDXE2:Make;DclTee9QR5D16:Make;Tee9QR5D16:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

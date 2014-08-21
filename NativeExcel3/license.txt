@@ -1,0 +1,40 @@
+Registered User License
+
+IMPORTANT NOTICE
+
+THIS NIKASOFT LICENSE AGREEMENT ("AGREEMENT") IS A LEGAL
+AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR AN ENTITY)
+AND NIKASOFT ("COMPANY") FOR THE NATIVEEXCEL LIBRARY
+("SOFTWARE PRODUCT"). BY USING ALL OR ANY PORTION OF THE
+SOFTWARE PRODUCT YOU ACCEPT ALL THE TERMS AND CONDITIONS
+OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS OF
+THIS AGREEMENT, YOU MUST CEASE USING THIS SOFTWARE PRODUCT
+IMMEDIATELY.
+
+GRANT OF LICENSE
+
+a) You may install and use the SOFTWARE PRODUCT, for the
+   purpose of developing application software, only on the
+   number of computers you have purchased licenses for.
+   You require one License per developer.
+b) You may deploy the software you develop, using the
+   SOFTWARE PRODUCT, on any number of computers, royalty
+   free, provided you agree with all terms of this AGREEMENT.
+c) You may modify the SOFTWARE PRODUCT for the purpose of
+   developing and integrating into your own software only.
+d) You may not use this SOFTWARE PRODUCT or any part of the
+   source code contained in it to develop or assist in the
+   development of a software product or product suite whose
+   sole purpose is to generate Excel files.
+e) You may not distribute or disclose the source code, or
+   any portions or modifications or derivative works thereof,
+   to any third party, in source code form.
+f) You may not rent or lease the SOFTWARE PRODUCT
+
+LIMITED WARRANTY
+
+The SOFTWARE PRODUCT is provided to you "AS-IS" without
+warranty of any kind. All risks and losses associated with
+its use are assumed by you. In no event shall the author of
+the library be held accountable for any damages or losses
+that may occur from use or misuse of the SOFTWARE PRODUCT.

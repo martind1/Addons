@@ -1,0 +1,14 @@
+d:\DelphiXE2\ADDONS.presvn\.svn
+d:\DelphiXE2\ADDONS.presvn\C3DCNVS\.svn
+d:\DelphiXE2\ADDONS.presvn\Combit\.svn
+d:\DelphiXE2\ADDONS.presvn\Combit\LL17\.svn
+d:\DelphiXE2\ADDONS.presvn\DbTreeView\.svn
+d:\DelphiXE2\ADDONS.presvn\ean45full\.svn
+d:\DelphiXE2\ADDONS.presvn\ean45full\Source\.svn
+d:\DelphiXE2\ADDONS.presvn\fbarcode2\.svn
+d:\DelphiXE2\ADDONS.presvn\NativeExcel3\.svn
+d:\DelphiXE2\ADDONS.presvn\NativeExcel3\Source\.svn
+d:\DelphiXE2\ADDONS.presvn\tdbf\.svn
+d:\DelphiXE2\ADDONS.presvn\XYGraph\.svn
+d:\DelphiXE2\ADDONS.presvn\ZipMaster\.svn
+d:\DelphiXE2\ADDONS.presvn\ZipMaster\Delphi\.svn

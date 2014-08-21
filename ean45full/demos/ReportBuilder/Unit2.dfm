@@ -1,0 +1,203 @@
+object Form2: TForm2
+  Left = 56
+  Top = 139
+  Width = 696
+  Height = 480
+  Caption = 'Form2'
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 72
+    Top = 16
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object RPT: TppReport
+    AutoStop = False
+    DataPipeline = ppDBPipeline1
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.PaperName = 'Letter'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 279401
+    PrinterSetup.mmPaperWidth = 215900
+    UserName = 'Report'
+    DeviceType = 'Screen'
+    Left = 16
+    Top = 24
+    Version = '4.23'
+    mmColumnWidth = 0
+    object ppHeaderBand1: TppHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppDetailBand1: TppDetailBand
+      mmBottomOffset = 0
+      mmHeight = 24077
+      mmPrintPosition = 0
+      object RBEan1: TRBEan
+        UserName = 'Ean1'
+        BackgroundColor = clWhite
+        Transparent = False
+        ShowLabels = True
+        StartStopLines = True
+        TypBarCode = bcCode128
+        LinesColor = clBlack
+        Ean13AddUp = True
+        FontAutoSize = True
+        Security = False
+        DemoVersion = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        BarCode = 'PSOFT'
+        Angle = 0
+        DisableEditor = False
+        OnBeforePrint = RBEan1BeforePrint
+        mmHeight = 19315
+        mmLeft = 21431
+        mmTop = 1852
+        mmWidth = 40217
+        BandType = 4
+      end
+      object RBDBEan1: TRBDBEan
+        UserName = 'DBEan1'
+        BackgroundColor = clWhite
+        Transparent = False
+        ShowLabels = True
+        StartStopLines = True
+        TypBarCode = bcCode128
+        LinesColor = clBlack
+        Ean13AddUp = True
+        FontAutoSize = True
+        Security = False
+        DemoVersion = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        BarCode = 'Tetras'
+        Angle = 0
+        DisableEditor = False
+        DataField = 'NAME'
+        DataPipeLine = ppDBPipeline1
+        mmHeight = 19579
+        mmLeft = 130969
+        mmTop = 2117
+        mmWidth = 37571
+        BandType = 4
+      end
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        Caption = 'TRBEan'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 4763
+        mmTop = 1852
+        mmWidth = 12700
+        BandType = 4
+      end
+      object ppLabel2: TppLabel
+        UserName = 'Label2'
+        Caption = 'TRBDBEan'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 100806
+        mmTop = 2117
+        mmWidth = 17463
+        BandType = 4
+      end
+    end
+    object ppFooterBand1: TppFooterBand
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+  end
+  object ppDBPipeline1: TppDBPipeline
+    DataSource = DataSource1
+    UserName = 'DBPipeline1'
+    Left = 16
+    Top = 64
+    object ppDBPipeline1ppField1: TppField
+      FieldAlias = 'NAME'
+      FieldName = 'NAME'
+      FieldLength = 10
+      DisplayWidth = 10
+      Position = 0
+    end
+    object ppDBPipeline1ppField2: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'SIZE'
+      FieldName = 'SIZE'
+      FieldLength = 0
+      DataType = dtInteger
+      DisplayWidth = 10
+      Position = 1
+    end
+    object ppDBPipeline1ppField3: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'WEIGHT'
+      FieldName = 'WEIGHT'
+      FieldLength = 0
+      DataType = dtInteger
+      DisplayWidth = 10
+      Position = 2
+    end
+    object ppDBPipeline1ppField4: TppField
+      FieldAlias = 'AREA'
+      FieldName = 'AREA'
+      FieldLength = 20
+      DisplayWidth = 20
+      Position = 3
+    end
+    object ppDBPipeline1ppField5: TppField
+      FieldAlias = 'BMP'
+      FieldName = 'BMP'
+      FieldLength = 1
+      DataType = dtBLOB
+      DisplayWidth = 10
+      Position = 4
+      Searchable = False
+      Sortable = False
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = TBL
+    Left = 48
+    Top = 104
+  end
+  object TBL: TTable
+    Active = True
+    DatabaseName = 'DBDEMOS'
+    TableName = 'animals.dbf'
+    Left = 16
+    Top = 104
+  end
+end

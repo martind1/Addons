@@ -1,0 +1,14 @@
+This zip file contains a Delphi 4 (and 5) version of Allen Miller's Curve 
+Fitting routine (from: the book "Pascal Programs For Scientists And 
+Engineers", typed and submitted to MTPUG in Oct. 1982 by Juergen Loewner,
+and corrected and adaptated for Turbo Pascal by Jeff Weiss.
+
+I have updated these routines to work with  Delphi 4's open array 
+parameters. which allows the routine to be generalised so that it is 
+no longer hard-coded to make a specific order of best fit or work with 
+a specific number of points.
+
+David J Taylor, Edinburgh
+2001 Jan 07
+Web site: www.satsignal.net
+E-mail: davidtaylor@writeme.com

@@ -1,0 +1,2 @@
+20:00 13.11.2012 rename nach xygraph.pas wg Namenskonflikte Delphi Graph
+02:33 26.08.01	gelöscht aus VCL

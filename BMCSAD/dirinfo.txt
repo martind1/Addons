@@ -1,0 +1,3 @@
+BMCSAD_TLB.pas von D5 kopiert.
+
+Generiertes TLB ist falsch. Umbenannt nach BMCSAD_TLB.pas.ori.

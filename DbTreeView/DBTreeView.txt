@@ -1,0 +1,161 @@
+__________________
+TDBTreeView v. 1.2
+
+
+
+HISTORY AND DISCLAIMER
+~~~~~~~~~~~~~~~~~~~~~~
+
+version 1.2
+- bug fixed when inserting first node in dataset with non-autoinc "id field"
+- BuildMethod property added
+
+version 1.1
+- root is not a "virtual" anymore. You have to create your own "root record" in
+your dataset. If you want to restrict editing or/and deleting root record use
+OnEditNode and OnDeleteNode events.
+- Changing property created. OnMouseDown, OnMouseUp, OnExit and OnEnter event
+handlers uncovered.
+- numerous bugs fixed
+- demo added
+
+version 1.0
+Initial release
+
+
+The story started when I've got the need in good, customizable and quick
+data-aware tree view control. All I've got from internet was not good enough.
+Either it was simple browsing controls with no table-following and editing
+either it was shareware components for quite a price. So I've decided to write
+my own tree view control. And I've decided to make it absolutely FREEWARE just
+to spite shareware developers who like to charge money for a couple lines of
+code. So here it is. It took three days to make initial release and some days to
+fix quite a few bugs. More will be fixed if you'll report them. YOU CAN USE THIS
+CONTROL ABSOLUTELY FREE IN ALL YOUR APPLICATIONS, COMMERCIAL AND NOT. IN RETURN
+YOU'RE USING IT AT YOUR OWN RISK SO AUTHOR NOT RESPONSIBLE FOR DATA OR MONEY
+LOST, COMPUTER CRASH, EARTHQUAKES, TYPHOONS, YOUR PET DOG SICK AND SO CAUSED BY USING
+THIS CONTROL. Nevertheless I would be grateful if you will send me couple lines
+about using it along with bugs (if any) you will find.
+
+INSTALLATION
+~~~~~~~~~~~~
+
+Unpack archive (probably you did it already). In Delphi's menu go to
+Component->Install Component. Choose "Install component..." Press "Browse"
+button and choose DBTreeViewReg.pas After pressing "OK" component should appear
+in "Data Controls" section of your component palette.
+
+
+
+FEATURES
+~~~~~~~~
+
+Here is few important features of TDBTreeView:
+
+1. It's quick. Instead of rebuilding whole tree every time you change the item
+which is focused it builds it once. Using ONLY TDBTreeView for navigating
+through connected dataset you'll get highest speed possible (means if you will
+navigate the dataset outside the TDBTreeView it HAS to rebuild tree because only
+God knows what you have changed).
+
+2. It's browsing. Means if you change focused item in TDBTreeView the position
+will change in connected dataset.
+
+3. It's editing. You can edit display field, add and delete nodes. Of course it
+will replicate to dataset. And no tree rebuild with screen flicking! Also you
+can define your own current record editing procedure (OnEditNode property) which
+will carefully post your changes into dataset, same as before, without
+rebuilding whole tree.
+
+4. It can keep additional data from the other fields. You can define them in
+StoredFieldsList and retrieve the information using GetStoredField procedure. In
+design mode you can use nice property editor (actually my first) to edit the
+list of fields you want to keep in memory along with tree nodes.
+
+
+REFERENCE
+~~~~~~~~~
+
+Here is reference of all properties and methods which is different from
+TCustomTreeView.
+
+
+PROPERTIES
+
+property DataSource: TDataSource;
+It's obviously enough the datasource connected to your dataset you want to
+represent as a tree.
+
+property IDField: String;
+This property is the name of the dataset field which holds the unique ID for
+each of the tree nodes. The field can be any of integer types including
+ftAutoInc.
+
+property RootID : Integer;
+This property hold the ID of the root. It's 0 (zero) by default.
+
+property ParentIDField: String;
+This property is the name of the dataset field which holds the node's parent ID.
+
+property DisplayField: String;
+This is the name of the field which contain the string which will be displayed
+in the tree view as the node caption.
+
+property StoredFieldsList: TStringList;
+This is the list of field names which will be read and stored by RebuildTree
+procedure. Those fields values will be stored in memory and can be retrieved by
+GetStoredField function for any of the tree nodes in the tree view.
+
+property Changing: Boolean;
+If set to true it tells to TDBTreeView instance that you going to edit
+corresponding dataset OUTSIDE of TDBTreeView. Use this property with care. Do
+not forget to put it to False again. Look demo for more details.
+
+property BuildMethod: TBuildMethod;
+Indicates the method of building the tree from dataset. Can be bmFilter
+(default) or bmRaw. If your dataset doesn't support filtering (i.e. TDbf
+component) set this property to bmRaw. If it's set to bmRaw rebuilding of tree
+will take more time but delay will be considerable only on big amounts of data.
+
+
+METHODS
+
+procedure RebuildTree(KeepCurrentID: Boolean);
+The name is self-explanatory. This procedure is to rebuild whole tree from the
+dataset. If KeepCurrentID is true then procedure will try to position on the
+same tree node (means the tree node with same ID) after rebuilding.
+
+function GetStoredField(Node: TTreeNode; Field: String): String;
+The result is the Field value stored along with Node.
+
+
+EVENTS
+
+TOnEditingNodeEvent = procedure (Sender: TObject; var Allow: Boolean) of object;
+
+TOnInsertingNodeEvent = procedure (Sender: TObject; var NewCaption: String; var
+Allow: Boolean) of object;
+
+property OnEditingNode: TOnEditingNodeEvent;
+Called when node editing is occurred. You can disallow the editing by setting
+the Allow to false.
+
+property OnEditNode: TNotifyEvent;
+Defining this event you can specify the user editing of the current record. THIS
+EVENT IS ONLY FOR EDITING OF _CURRENT_ RECORD. IF YOU WILL DELETE, INSERT OR
+MOVE TO OTHER RECORD YOU MOST LIKELY WILL MESS UP THE TREE DATA. If you want to
+edit the connected dataset outside the TDBTreeView you have to rebuild tree
+afterwise calling the RebuildTree method. Do not forget to use
+DisableControls/EnableControls for your dataset overwise TDBTreeView will
+greatly slow down the process by rebuilding the tree after any of your changes.
+
+property OnInsertingNode: TOnInsertingNodeEvent;
+Calling when new node going to be inserted. You can specify newly created node
+caption by setting NewCaption or disallow the inserting by setting the Allow to
+false.
+
+property OnDeletingNode: TOnEditingNodeEvent;
+Called when node going to delete. You can disallow the deleting by setting Allow
+to false. Root can't be deleted.
+
+

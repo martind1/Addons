@@ -1,0 +1,102 @@
+package Addons;
+
+{$R *.res}
+{$R 'OnlyOpenOnce.dcr'}
+{$R 'DbTreeView\DBTreeView.dcr'}
+{$R 'WinFax.dcr'}
+{$R 'HTTPGet.dcr'}
+{$R 'umDBImage.dcr'}
+{$R 'UCLinePrinter.dcr'}
+{$R 'JLLabel.dcr'}
+{$R 'NSTIMER.dcr'}
+{$R 'HW_32.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN OFF}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'KMP Addons'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vclx,
+  vcl,
+  vclimg,
+  dbrtl,
+  vcldb,
+  designide,
+  bdertl,
+  vclie,
+  VclSmp,
+  vcldbx,
+  ibxpress,
+  IndyCore,
+  IndySystem,
+  IndyProtocols,
+  Jcl,
+  JvCore,
+  JvStdCtrls,
+  unidac160,
+  dac160,
+  madBasic_,
+  madDisAsm_,
+  madExcept_,
+  QR5RunDXE2;
+
+contains
+  Bsdbgrid in 'Bsdbgrid.pas',
+  Hw_32 in 'Hw_32.pas',
+  nstimer in 'nstimer.pas',
+  JLLabel in 'JLLabel.pas',
+  UCLinePrinter in 'UCLinePrinter.pas',
+  umDBImage in 'umDBImage.pas',
+  HTTPGet in 'HTTPGet.pas',
+  ShellDropper in 'ShellDropper.pas',
+  WinFax in 'WinFax.pas',
+  DIMime in 'DIMime.pas',
+  DIMimeStreams in 'DIMimeStreams.pas',
+  DBTreeViewReg in 'DbTreeView\DBTreeViewReg.pas',
+  EanRead in 'ean45full\Source\EanRead.pas',
+  EanReg in 'ean45full\Source\EanReg.pas',
+  EanSpecs in 'ean45full\Source\EanSpecs.pas',
+  EanDB in 'ean45full\Source\EanDB.pas',
+  EanDBQr in 'ean45full\Source\EanDBQr.pas',
+  EanFmt2 in 'ean45full\Source\EanFmt2.pas' {EANSetupFmt},
+  EanKod in 'ean45full\Source\EanKod.pas',
+  EanPDF417 in 'ean45full\Source\EanPDF417.pas',
+  EanQR in 'ean45full\Source\EanQR.pas',
+  EanRegEditors in 'ean45full\Source\EanRegEditors.pas',
+  fldchk in 'DbTreeView\fldchk.pas' {FldChooseDlg},
+  DBTreeView in 'DbTreeView\DBTreeView.pas',
+  U3DReg in 'C3DCNVS\U3DReg.pas',
+  U3DCnvs in 'C3DCNVS\U3DCnvs.pas',
+  U3DEdit in 'C3DCNVS\U3DEdit.pas' {ViewerEditorDlg},
+  OnlyOpenOnce in 'OnlyOpenOnce.pas',
+  MapiMail in 'MapiMail.pas',
+  PJStringPE in 'DelphiDabbler\dd-stringpe\PJStringPE.pas' {PJStringPEDlg},
+  itfGSApiDynamic in 'tpdfimage\itfGSApiDynamic.pas',
+  itfPDFImage in 'tpdfimage\itfPDFImage.pas';
+
+end.
+
+

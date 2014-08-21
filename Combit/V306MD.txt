@@ -1,0 +1,34 @@
+Projekt    Version        Stand
+LL         3.06MD         15.05.02
+Combit List&Label Komponenten
+==================================
+
+Die Komponenten wurden aus KMP entfernt.
+
+Installation
+------------
+1. Package öffnen: KMP\ADDONS\COMBIT\LL.DPK
+   Compilieren und installieren.
+2. >Tools >Umgebungsoptionen >Bibliothek >Bibliothekspfad
+   KMP\ADDONS\COMBIT\ hinzufügen.
+
+List&Label Erweiterung für TPrnSource: TLlPrn
+---------------------------------------------
+- Abkömmling von TPrnSource
+- Verwendet L8MD-Komponente (unser Ersatz für die Original DBL8_ von combit)
+- Properties:
+  - MuSelect: DBGrid von der die markierten Datensätze stammen
+  - DataSource: Datenquelle bei einfachen Listen und Label/Card
+  - MasterSource: Datenquelle bei MasterDetail Reports (sonst: DataSource)
+  - DataSource,DetailSource1..9: Bis zu 10 Detailtabellen
+  - DesignerFileExt: 2stelliger Kürzel. Eindeutig für ges. Projektverzeichnis!
+  Die restlichen Props werden an L8MD weitergereicht.
+
+- OneRecord: true = Ausdruck auf aktuellen Datensatz zu beschränken
+- Keyfields: Sortierung der Haupttabelle
+- FltrList: Filtert zusätzlich zu den übernommenen Filtern
+
+
+ToDo
+----
+
